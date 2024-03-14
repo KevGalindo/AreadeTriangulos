@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áreas de Triángulos</title>
+</head>
+<body>
+
+<h1>Áreas de Triángulos</h1>
+
+<script>
+// JSON
+const triangulos = [
+    {"base": 8, "altura": 9},
+    {"base": 6, "altura": 8},
+    {"base": 3, "altura": 2},
+    {"base": 4, "altura": 3},
+    {"base": 5, "altura": 4}
+];
+
+// Funcion para calcular el area del triangulo
+function calcularArea(base, altura) {
+    return (base * altura) / 2;
+}
+
+// Imprimir las areas de los triangulos en consola
+triangulos.forEach((triangulo, e) => {
+    const area = calcularArea(triangulo.base, triangulo.altura).toFixed(2); // Redondear a 2 decimales
+    console.log(`Triángulo ${e + 1}: Base = ${triangulo.base}, Altura = ${triangulo.altura}, Área = ${area}`);
+});
+</script>
+
+</body>
+</html>
